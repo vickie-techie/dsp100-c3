@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-summary {
+            width: 50%;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-right: 1px solid #ddd;
+        }
+
+        .payment-summary h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .item img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        .item-details {
+            line-height: 1.5;
+        }
+
+        .summary-details {
+            margin-top: 20px;
+        }
+
+        .summary-details hr {
+            margin: 20px 0;
+        }
+
+        .payment-form {
+            width: 45%;
+            padding: 20px;
+        }
+
+        .payment-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox input {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 15px;
+            width: 100%;
+            background-color: #5d3ec1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3b2999;
+        }
+
+        .ctrlBtn {
+            background-color: #5d3ec1;
+            color: white;
+            padding: 0px 15px;
+            margin-top: 10px;
+            font-size: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .qty {
+            font-size: 20px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Payment Summary -->
+        <div class="payment-summary">
+
+            <div class="item">
+                <img src="image.png" alt="Pure Set" />
+                <div class="item-details">
+                    <p>Pure set</p>
+                    <p>₦ <b id="cost"></b> </p>
+                    <div style="margin-top: 5px;">
+                        
+                        <span class="ctrlBtn" id="add">+</span>
+
+                        &nbsp; &nbsp; &nbsp;
+
+                        <span class="qty" id="qty">1</span>
+
+                        &nbsp; &nbsp; &nbsp;
+
+                        <span class="ctrlBtn" id="minus">-</span>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-details">
+                <p>Subtotal: ₦ <b id="subtotal"></b></p>
+                <p>Shipping: ₦ <b id="shippingfee"></b></p>
+                <hr>
+                <h2>Total: ₦ <b id="total"></b></h2>
+            </div>
+        </div>
+
+        <!-- Payment Form -->
+        <div class="payment-form">
+            <h3>Or pay with card</h3>
+            <form id="payment-form">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="address">Shipping address</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="input-group">
+                    <label for="card-number">Card information</label>
+                    <input type="text" id="card-number" placeholder="1234 1234 1234 1234" required>
+                </div>
+                <div class="input-group">
+                    <label for="expiry-date">Expiration date</label>
+                    <input type="text" id="expiry-date" placeholder="MM / YY" required>
+                </div>
+                <div class="input-group">
+                    <label for="cvc">CVC</label>
+                    <input type="text" id="cvc" placeholder="CVC" required>
+                </div>
+                <div class="input-group checkbox">
+                    <input type="checkbox" id="billing-same" checked>
+                    <label for="billing-same">Billing address is same as shipping</label>
+                </div>
+                <button type="submit">Pay ₦ <b id="total2"></b></button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let qty = 1;
+        let unitCost = 5000;
+        let subTotal = qty * unitCost
+        let shipping = 200;
+        let total = qty * unitCost + shipping;
+
+        document.getElementById('total').textContent = total
+        document.getElementById('total2').textContent = total
+        document.getElementById('subtotal').textContent = subTotal
+        document.getElementById('shippingfee').textContent = shipping
+        document.getElementById('cost').textContent = unitCost
+
+
+        document.getElementById('add').addEventListener("click", () => {
+             qty += 1;
+            document.getElementById('qty').textContent = qty
+            document.getElementById('total').textContent = qty * unitCost + shipping;
+            document.getElementById('total2').textContent = qty * unitCost + shipping;
+            document.getElementById('subtotal').textContent = qty * unitCost
+        })
+
+        document.getElementById('minus').addEventListener("click", () => {
+            if (qty > 0) {
+                qty -= 1
+                console.log(qty)
+                document.getElementById('qty').textContent = qty
+            }
+        })
+
+
+
+
+        document.getElementById("payment-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const cardNumber = document.getElementById("card-number").value;
+            const expiryDate = document.getElementById("expiry-date").value;
+            const cvc = document.getElementById("cvc").value;
+
+            // Validate the inputs (you can add more validation rules here)
+            if (!email || !name || !address || !cardNumber || !expiryDate || !cvc) {
+                alert("Please fill out all the fields.");
+                return;
+            }
+
+            // Simulate payment processing (you would replace this with actual payment logic)
+            alert("Payment processing...");
+        });
+    </script>
+</body>
+
+</html>

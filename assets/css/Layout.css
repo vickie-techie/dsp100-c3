@@ -1,0 +1,185 @@
+/* .parent {
+  width: 600px;
+  height: auto;
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.parent .box1 {
+  width: 50%;
+  height: 100px;
+  background-color: aqua;
+}
+.parent .box2 {
+  width: 50%;
+  height: 100px;
+  background-color: antiquewhite;
+}
+.parent .box3 {
+  width: 50%;
+  height: 100px;
+  background-color: yellow;
+}
+.parent .box4 {
+  width: 50%;
+  height: 100px;
+  background-color: red;
+}
+.parent .box5 {
+  width: 33.33%;
+  height: 100px;
+  background-color: orange;
+}
+.parent .box6 {
+  width: 33.33%;
+  height: 100px;
+  background-color: purple;
+}
+.parent .box7 {
+  width: 33.33%;
+  height: 100px;
+  background-color: rgb(249, 255, 192);
+}
+.parent .box8 {
+  width: 100%;
+  height: 100px;
+  background-color: pink;
+}
+.parent .box9 {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(153, 111, 114);
+}
+.parent .box10 {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(49, 5, 13);
+}
+.parent .box11 {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(192, 255, 206);
+}
+.parent .box12 {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(49, 3, 10);
+}
+.space {
+  width: 1000px;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.father {
+  width: 600px;
+  height: auto;
+  background-color: palevioletred;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.father .box1 {
+  width: 33.33%;
+  height: 100px;
+  background-color: aqua;
+}
+.father .box2 {
+  width: 33.33%;
+  height: 100px;
+  background-color: antiquewhite;
+}
+.father .box3 {
+  width: 33.33%;
+  height: 100px;
+  background-color: yellow;
+}
+.father .box4 {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+}
+.father .box5 {
+  width: 50%;
+  height: 100px;
+  background-color: orange;
+}
+.father .box6 {
+  width: 50%;
+  height: 100px;
+  background-color: purple;
+}
+.father .box7 {
+  width: 33.33%;
+  height: 100px;
+  background-color: rgb(249, 255, 192);
+}
+.father .box8 {
+  width: 66.66%;
+  height: 100px;
+  background-color: pink;
+}
+.father .box9 {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(153, 111, 114);
+}
+.father .box10 {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(49, 5, 13);
+}
+.father .box11 {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(192, 255, 206);
+}
+.father .box12 {
+  width: 25%;
+  height: 100px;
+  background-color: rgb(49, 3, 10);
+} */
+
+.container {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+  position: relative;
+}
+.container .box1 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  /* top: 100px; */
+  /* left: 50px; */
+  position: absolute;
+  left: 10px;
+  z-index: 1;
+}
+.container .box2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: red;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .box3 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: relative;
+  z-index: 3;
+  opacity: 0.3;
+}

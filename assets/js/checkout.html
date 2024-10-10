@@ -1,0 +1,292 @@
+<section class="pay-powdur">
+  <div class="tag1">
+    <h2>Pay Powdur</h2>
+    <h1>₦ <b id="total"></b></h1>
+    <div class="pin">
+      <img src="" alt="" />
+      <div class="price">
+        <p>Pure set</p>
+        <p>₦ <b id="cost"></b></p>
+        <div class="qnty">
+          <div style="margin-top: 5px">
+            <span class="ctrlBtn" id="add">+</span>
+
+            <!-- &nbsp; &nbsp; &nbsp; -->
+
+            <span class="qty" id="qty">1</span>
+
+            <!-- &nbsp; &nbsp; &nbsp; -->
+
+            <span class="ctrlBtn" id="minus">-</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="pin">
+        <img src="assets/images/shoes.jpeg" alt="" />
+        <div class="price">
+          <p>Pure glow cream</p>
+          <p>$ <b id="cost"></b></p>
+          <div class="qty">
+            <button><span class="ctrlBtn" id="add">+</span></button>
+            <p><b id="qty"></b></p>
+            <button><span class="ctrlBtn" id="sub">-</span></button>
+          </div>
+        </div> 
+      </div> -->
+    <div class="summary">
+      <p>Subtotal: ₦ <b id="subtotal"></b></p>
+      <p>Shipping: ₦ <b id="shipping"></b></p>
+    </div>
+    <div class="line"></div>
+    <h2>Total due: ₦ <b id="total3"></b></h2>
+  </div>
+  <div class="tag2">
+    <h2>Or pay with card</h2>
+    <label for="">Email</label>
+    <input type="text" id="email" placeholder="email" required />
+    <label for="">Name</label>
+    <input type="text" id="name" placeholder="name" required />
+    <label for="">Shoppping address</label>
+    <input type="text" id="address" placeholder="address" required />
+    <label for="">Card information</label>
+    <input
+      type="number"
+      id="card-number"
+      placeholder="1234 1234 1234 1234"
+      required
+    />
+    <label for="">Expiry Date</label>
+    <input type="number" id="date" placeholder="MM / YY" required />
+    <label for="">CVV</label>
+    <input type="number" id="cvc" placeholder="cvv" required />
+    <div class="smy">
+      <i class="fa-solid fa-check"></i>
+      <div class="box">Billing address is same as shopping.</div>
+    </div>
+    <div class="btn">
+      <button type="submit">
+        <h2>Pay ₦ <b id="total2"></b></h2>
+      </button>
+    </div>
+  </div>
+</section>
+<style>
+  * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  .pay-powdur {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .pay-powdur .tag1 {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(253, 244, 233);
+    color: black;
+    padding: 50px;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    border-radius: 15px 0px 0px 15px;
+  }
+  .pay-powdur .tag1 h2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .pay-powdur .tag1 h1 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .pay-powdur .tag1 p {
+    font-size: 20px;
+  }
+  .pay-powdur .tag1 .pin {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .pay-powdur .tag1 .pin img {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  .pay-powdur .tag1 .pin .price .qnty {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    flex-wrap: nowrap;
+  }
+  .pay-powdur .tag1 .pin .price .qnty .bn {
+    padding: 5px 13px;
+  }
+  .pay-powdur .tag1 .pin .price .qnty p {
+    margin: 0px 5px;
+    line-height: 1.5;
+  }
+  .pay-powdur .tag1 .pin .price .qnty .ctrlBtn {
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: none;
+    margin: 2px 5px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(213, 5, 213, 0.848);
+  }
+  .pay-powdur .tag1 .summary {
+    font-size: 20px;
+  }
+  .pay-powdur .tag1 .line {
+    width: 100%;
+    height: 2px;
+    margin: 15px 0px;
+    background-color: rgb(253, 228, 189);
+  }
+  .pay-powdur .tag2 {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgb(252, 229, 233);
+    border-radius: 0px 15px 15px 0px;
+  }
+  .pay-powdur .tag2 h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .pay-powdur .tag2 label {
+    font-size: 20px;
+    color: black;
+    margin: 10px 0px 10px 5px;
+  }
+  .pay-powdur .tag2 input[type="text"] {
+    width: 95%;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-style: italic;
+    color: gainsboro;
+  }
+  .pay-powdur .tag2 input[type="number"] {
+    width: 95%;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-style: italic;
+    color: gainsboro;
+  }
+  .pay-powdur .tag2 .smy {
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .pay-powdur .tag2 .smy .box {
+    width: 25%;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 150px;
+  }
+  .pay-powdur .tag2 .smy .box .fa-check {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #007bff;
+    width: 10px;
+  }
+  .pay-powdur .tag2 .btn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pay-powdur .tag2 .btn button {
+    width: 60%;
+    height: auto;
+    padding: 10px;
+    background-color: rgba(213, 5, 213, 0.848);
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+  }
+</style>
+<script>
+  let qty = 1;
+  let unitCost = 5000;
+  const shippingfee = 250;
+  let subTotal = qty * unitCost;
+  let total = subTotal + shipping;
+  document.getElementById("cost").textContent = unitCost;
+  document.getElementById("subtotal").textContent = subTotal;
+  document.getElementById("shipping").textContent = shippingfee;
+  document.getElementById("total").textContent = total;
+  document.getElementById("total2").textContent = total;
+  document.getElementById("total3").textContent = total;
+
+  document.getElementById("add").addEventListener("click", () => {
+    qty += 1;
+    document.getElementById("qty").textContent = qty;
+    document.getElementById("total").textContent = qty * unitCost + shipping;
+    document.getElementById("total2").textContent = qty * unitCost + shipping;
+    document.getElementById("total3").textContent = qty * unitCost + shipping;
+    document.getElementById("subtotal").textContent = qty * unitCost;
+  });
+
+  document.getElementById("minus").addEventListener("click", () => {
+    if (qty > 0) {
+      qty -= 1;
+      console.log(qty);
+      document.getElementById("qty").textContent = qty;
+    }
+  });
+
+  document
+    .getElementById("payment-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const name = document.getElementById("name").value;
+      const address = document.getElementById("address").value;
+      const cardNumber = document.getElementById("card-number").value;
+      const expiryDate = document.getElementById("date").value;
+      const cvc = document.getElementById("cvc").value;
+
+      // Validate the inputs (you can add more validation rules here)
+      if (!email || !name || !address || !cardNumber || !expiryDate || !cvc) {
+        alert("Please fill out all the fields.");
+        return;
+      }
+
+      // Simulate payment processing (you would replace this with actual payment logic)
+      alert("Payment processing...");
+    });
+  console.log(total);
+</script>

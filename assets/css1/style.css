@@ -1,0 +1,189 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "jost" sans-serif;
+  }
+  .background {
+    width: 100%;
+    height: auto;
+    padding: 7.5% 20%;
+    display: flex;
+    justify-content: center;
+    /* background-color: #a331c6f6; */
+    background-image: linear-gradient(
+      to left,
+      #7992e6,
+      #816be9,
+      #9c53ec,
+      #bf3ef1,
+      #e138f5
+    );
+  }
+  .background .field {
+    width: 38%;
+    height: 620px;
+    background-color: white;
+    padding: 3%;
+    border-radius: 15px;
+  }
+  .background .field h1 {
+    display: block;
+    padding-left: 35%;
+    color: #000000;
+    align-self: center;
+    margin-bottom: 25px;
+  }
+  .background .field .username {
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .background .field .username p {
+    line-height: 12px;
+    color: rgb(68, 68, 68);
+  }
+  .background .field .username .un {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .fa-user {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  .background .field .username .un p {
+    line-height: 12px;
+    color: rgb(68, 68, 68);
+    margin-right: 50px;
+  }
+  .background .field .username .un .line {
+    width: 94%;
+    height: 1px;
+    background-color: rgb(68, 68, 68);
+    margin-bottom: 20px;
+  }
+  .background .field .password {
+    /* width: 94%;
+    display: flex;
+    flex-direction: row; */
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .background .field .password p {
+    line-height: 12px;
+    color: rgb(68, 68, 68);
+  }
+  .background .field .password .pw {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .fa-lock {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  .background .field .password .pw p {
+    line-height: 12px;
+    color: rgb(68, 68, 68);
+    margin-right: 50px;
+  }
+  .background .field .password .line {
+    width: 94%;
+    height: 1px;
+    background-color: rgb(68, 68, 68);
+  }
+  .background .field .password .fp {
+    margin: 3px 0px 3px 150px;
+  }
+  .background .field .btn {
+    color: white;
+    margin-left: 2%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding: 0% 35%;
+    height: 30px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background-image: linear-gradient(
+      to left,
+      #7992e6,
+      #816be9,
+      #9c53ec,
+      #bf3ef1,
+      #e138f5
+    );
+    /* width: 150px;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 80px;
+    border-radius: 50px;
+    background-color: #a331c6f6;
+    display: flex;
+    justify-content: center;
+    align-content: center; */
+  }
+  .background .field .btn h3 {
+    font-size: 20px;
+  }
+  .background .field .sign-up {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .background .field .sign-up p {
+    font-size: 16px;
+    font-style: italic;
+  }
+  .background .field .sign-up .socials {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .fa-facebook {
+    color: blue;
+    font-size: 30px;
+  }
+  .fa-twitter {
+    font-size: 15px;
+    color: white;
+    border: solid;
+    border-radius: 37.5px;
+    padding: 7.5px;
+    border-width: 0px;
+    background-color: rgba(30, 156, 239, 0.722);
+    display: block;
+    align-self: center;
+    justify-self: center;
+  }
+  .fa-google {
+    font-size: 15px;
+    color: white;
+    border: solid;
+    border-radius: 37.5px;
+    padding: 7.5px;
+    border-width: 0px;
+    background-color: rgba(207, 5, 5, 0.929);
+    display: block;
+    align-self: center;
+    justify-self: center;
+  }
+  .background .field .su {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40%;
+  }
+  .background .field .su p {
+    line-height: 16px;
+  }
+  
